@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3056FA26A9E90F00830EEB /* GameSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3056F926A9E90F00830EEB /* GameSingleton.swift */; };
+		AF3056FC26A9F19E00830EEB /* FirstDecisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3056FB26A9F19E00830EEB /* FirstDecisionViewController.swift */; };
+		AF3056FE26AA1D5D00830EEB /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3056FD26AA1D5D00830EEB /* Enums.swift */; };
 		AF32104E26A8C8310092F903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF32104D26A8C8310092F903 /* AppDelegate.swift */; };
-		AF32105026A8C8310092F903 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = AF32104F26A8C8310092F903 /* GameScene.sks */; };
 		AF32105226A8C8310092F903 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = AF32105126A8C8310092F903 /* Actions.sks */; };
-		AF32105426A8C8310092F903 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF32105326A8C8310092F903 /* GameScene.swift */; };
 		AF32105626A8C8310092F903 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF32105526A8C8310092F903 /* GameViewController.swift */; };
 		AF32105926A8C8310092F903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF32105726A8C8310092F903 /* Main.storyboard */; };
 		AF32105B26A8C8320092F903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF32105A26A8C8320092F903 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF3056F926A9E90F00830EEB /* GameSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSingleton.swift; sourceTree = "<group>"; };
+		AF3056FB26A9F19E00830EEB /* FirstDecisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDecisionViewController.swift; sourceTree = "<group>"; };
+		AF3056FD26AA1D5D00830EEB /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		AF32104A26A8C8310092F903 /* EscolhaDoFuturo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EscolhaDoFuturo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF32104D26A8C8310092F903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF32104F26A8C8310092F903 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		AF32105126A8C8310092F903 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		AF32105326A8C8310092F903 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		AF32105526A8C8310092F903 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		AF32105826A8C8310092F903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF32105A26A8C8320092F903 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,13 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				AF32104D26A8C8310092F903 /* AppDelegate.swift */,
-				AF32104F26A8C8310092F903 /* GameScene.sks */,
 				AF32105126A8C8310092F903 /* Actions.sks */,
-				AF32105326A8C8310092F903 /* GameScene.swift */,
+				AF3056FB26A9F19E00830EEB /* FirstDecisionViewController.swift */,
 				AF32105526A8C8310092F903 /* GameViewController.swift */,
 				AF32105726A8C8310092F903 /* Main.storyboard */,
 				AF32105A26A8C8320092F903 /* Assets.xcassets */,
 				AF32105C26A8C8320092F903 /* Info.plist */,
+				AF3056F926A9E90F00830EEB /* GameSingleton.swift */,
+				AF3056FD26AA1D5D00830EEB /* Enums.swift */,
 			);
 			path = EscolhaDoFuturo;
 			sourceTree = "<group>";
@@ -128,7 +131,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF32105926A8C8310092F903 /* Main.storyboard in Resources */,
-				AF32105026A8C8310092F903 /* GameScene.sks in Resources */,
 				AF32105B26A8C8320092F903 /* Assets.xcassets in Resources */,
 				AF32105226A8C8310092F903 /* Actions.sks in Resources */,
 			);
@@ -141,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF32105426A8C8310092F903 /* GameScene.swift in Sources */,
+				AF3056FC26A9F19E00830EEB /* FirstDecisionViewController.swift in Sources */,
 				AF32105626A8C8310092F903 /* GameViewController.swift in Sources */,
+				AF3056FE26AA1D5D00830EEB /* Enums.swift in Sources */,
+				AF3056FA26A9E90F00830EEB /* GameSingleton.swift in Sources */,
 				AF32104E26A8C8310092F903 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
