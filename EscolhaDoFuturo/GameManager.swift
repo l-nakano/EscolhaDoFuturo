@@ -1,5 +1,7 @@
-class GameSingleton {
-    static var sharedVariables = GameSingleton()
+import Foundation
+
+class GameManager {
+    static var shared = GameManager()
     
     private init() {}
     
@@ -24,13 +26,33 @@ class GameSingleton {
         "Não tinha plano de saúde e não poderia aguardar pelo atendimento no sistema de saúde público, tendo de fazer em uma rede particular. Ao todo, teve de desembolsar R$ 100.000,00."
     ]
     
-    let decisionsList = [3: "FirstDecision",
-                         7: "SecondDecision",
-                         10: "ThirdDecision",
-                         15: "FourthDecision",
-                         19: "FifthDecision"]
+    let decisionsList = [
+        3: Decision(choicesQty: 3, choicesLabel: ["Conservador", "Moderado", "Agressivo"], question: "Sabendo disso, qual você acha que seria o perfil de investidor de João?", answers: [PerfisInvestidor.conservador, PerfisInvestidor.moderado, PerfisInvestidor.agressivo], varToChange: .perfilInvestidor),
+        5: Decision(choicesQty: 2, choicesLabel: ["Compraria o computador", "Pouparia o dinheiro"], question: "O que você faria no lugar de João?", answers: [[Float(2000), Float(0)], [Float(9000), Float(0)]], varToChange: .VF),
+        7: Decision(choicesQty: 2, choicesLabel: ["Sairia com os amigos", "Guardaria a mesada"], question: "Qual decisão você tomaria no lugar de João?", answers: [[Float(0), Float(0)], [Float(0), Float(500)]], varToChange: .PMT),
+        12: Decision(choicesQty: 2, choicesLabel: ["Assinaria o pacote de televisão", "Gastaria apenas com a namorada"], question: "Qual seria a sua escolha?", answers: [[Float(0), Float(150)], [Float(0), Float(600)]], varToChange: .PMT),
+        15: Decision(choicesQty: 2, choicesLabel: ["Pegaria o presente do pai e pouparia", "Compraria a moto"], question: "Qual seria a sua atitude?", answers: [[Float(13500), Float(900)], [Float(0), Float(900)]], varToChange: .VF)
+    ]
     
-    var textController = 0
+    let yieldList = [
+        7: 6,
+        12: 12,
+        15: 24
+    ]
     
-    var perfilInvestidor: PerfisInvestidor = .conservador
+    var control = 0,
+        FV: Float = 0.0,
+        PMT: Float = 0.0,
+        perfilInvestidor: PerfisInvestidor = .conservador
+    
+    let i: () -> Float = {
+        switch shared.perfilInvestidor {
+        case .conservador:
+            return 0.02
+        case .moderado:
+            return 0.04
+        case .agressivo:
+            return 0.06
+        }
+    }
 }
