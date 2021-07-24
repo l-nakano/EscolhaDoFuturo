@@ -1,5 +1,5 @@
 enum PerfisInvestidor {
-    case conservador, moderado, agressivo
+    case conservador, moderado, agressivo, nenhum
 }
 
 enum varToChange {

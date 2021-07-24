@@ -18,6 +18,22 @@ class GameViewController: UIViewController {
         storyTextView.text = GameManager.shared.textsList[GameManager.shared.control]
         currentBalance.text = "\(GameManager.shared.FV)"
         currentMonthlyIncome.text = "\(GameManager.shared.PMT)"
+        GameManager.shared.control += 1
+    }
+    
+    func updateVariables(index: Int) {
+        if GameManager.shared.decisionsList[GameManager.shared.control]?.answers[index][0] as! PerfisInvestidor != PerfisInvestidor.nenhum {
+            GameManager.shared.perfilInvestidor = GameManager.shared.decisionsList[GameManager.shared.control]?.answers[index][0] as! PerfisInvestidor
+        }
+        GameManager.shared.FV += GameManager.shared.decisionsList[GameManager.shared.control]?.answers[index][1] as! Float
+        GameManager.shared.PMT += GameManager.shared.decisionsList[GameManager.shared.control]?.answers[index][2] as! Float
+        if let yieldN = GameManager.shared.timePastList[GameManager.shared.control] {
+            self.getNewFV(n: yieldN)
+        }
+    }
+    
+    func getNewFV(n: Int) {
+        GameManager.shared.FV = GameManager.shared.FV * powf((1 + GameManager.shared.i()), Float(n)) + GameManager.shared.PMT * (powf((1 + GameManager.shared.i()), Float(n)) - 1) / GameManager.shared.i()
     }
     
     func decisionViewTwoChoices(identifier: String) {
@@ -28,34 +44,10 @@ class GameViewController: UIViewController {
             vc.view.trailingAnchor.constraint(equalTo: storyView.trailingAnchor).isActive = true
             vc.view.leadingAnchor.constraint(equalTo: storyView.leadingAnchor).isActive = true
             vc.view.bottomAnchor.constraint(equalTo: storyView.bottomAnchor).isActive = true
-            vc.completion = { [self] answer in
+            vc.completion = { answer in
                 vc.view.removeFromSuperview()
-                switch GameManager.shared.decisionsList[GameManager.shared.control]?.varToChange {
-                case .perfilInvestidor:
-                    GameManager.shared.perfilInvestidor = GameManager.shared.decisionsList[GameManager.shared.control]?.answers[answer] as! PerfisInvestidor
-                case .PMT:
-                    GameManager.shared.PMT += GameManager.shared.decisionsList[GameManager.shared.control]?.answers[answer] as! Float
-                    if let yieldN = GameManager.shared.yieldList[GameManager.shared.control] {
-                        print(GameManager.shared.FV)
-                        print(GameManager.shared.PMT)
-                        print(GameManager.shared.i())
-                        print(yieldN)
-                        getNewFV(n: yieldN)
-                    }
-                case .VF:
-                    GameManager.shared.FV += GameManager.shared.decisionsList[GameManager.shared.control]?.answers[answer] as! Float
-                    if let yieldN = GameManager.shared.yieldList[GameManager.shared.control] {
-                        print(GameManager.shared.FV)
-                        print(GameManager.shared.PMT)
-                        print(GameManager.shared.i())
-                        print(yieldN)
-                        getNewFV(n: yieldN)
-                    }
-                default:
-                    fatalError("Não existe uma variável para modificar")
-                }
+                self.updateVariables(index: answer)
                 self.updateGameView()
-                GameManager.shared.control += 1
             }
         }
     }
@@ -68,26 +60,10 @@ class GameViewController: UIViewController {
             vc.view.trailingAnchor.constraint(equalTo: storyView.trailingAnchor).isActive = true
             vc.view.leadingAnchor.constraint(equalTo: storyView.leadingAnchor).isActive = true
             vc.view.bottomAnchor.constraint(equalTo: storyView.bottomAnchor).isActive = true
-            vc.completion = { [self] answer in
+            vc.completion = { answer in
                 vc.view.removeFromSuperview()
-                switch GameManager.shared.decisionsList[GameManager.shared.control]?.varToChange {
-                case .perfilInvestidor:
-                    GameManager.shared.perfilInvestidor = GameManager.shared.decisionsList[GameManager.shared.control]?.answers[answer] as! PerfisInvestidor
-                case .PMT:
-                    GameManager.shared.PMT += GameManager.shared.decisionsList[GameManager.shared.control]?.answers[answer] as! Float
-                    if let yieldN = GameManager.shared.yieldList[GameManager.shared.control] {
-                        getNewFV(n: yieldN)
-                    }
-                case .VF:
-                    GameManager.shared.FV += GameManager.shared.decisionsList[GameManager.shared.control]?.answers[answer] as! Float
-                    if let yieldN = GameManager.shared.yieldList[GameManager.shared.control] {
-                        getNewFV(n: yieldN)
-                    }
-                default:
-                    fatalError("Não existe uma variável para modificar")
-                }
+                self.updateVariables(index: answer)
                 self.updateGameView()
-                GameManager.shared.control += 1
             }
         }
     }
@@ -108,10 +84,6 @@ class GameViewController: UIViewController {
         return true
     }
     
-    func getNewFV(n: Int) {
-        GameManager.shared.FV = GameManager.shared.FV * powf((1 + GameManager.shared.i()), Float(n)) + GameManager.shared.PMT * (powf((1 + GameManager.shared.i()), Float(n)) - 1) / GameManager.shared.i()
-    }
-    
     @IBAction func nextButton(_ sender: UIButton) {
         if GameManager.shared.decisionsList.keys.contains(GameManager.shared.control) {
             switch GameManager.shared.decisionsList[GameManager.shared.control]?.choicesQty {
@@ -124,7 +96,6 @@ class GameViewController: UIViewController {
             }
         } else {
             updateGameView()
-            GameManager.shared.control += 1
         }
     }
 }

@@ -27,14 +27,14 @@ class GameManager {
     ]
     
     let decisionsList = [
-        3: Decision(choicesQty: 3, choicesLabel: ["Conservador", "Moderado", "Agressivo"], question: "Sabendo disso, qual você acha que seria o perfil de investidor de João?", answers: [PerfisInvestidor.conservador, PerfisInvestidor.moderado, PerfisInvestidor.agressivo], varToChange: .perfilInvestidor),
-        5: Decision(choicesQty: 2, choicesLabel: ["Compraria o computador", "Pouparia o dinheiro"], question: "O que você faria no lugar de João?", answers: [[Float(2000), Float(0)], [Float(9000), Float(0)]], varToChange: .VF),
-        7: Decision(choicesQty: 2, choicesLabel: ["Sairia com os amigos", "Guardaria a mesada"], question: "Qual decisão você tomaria no lugar de João?", answers: [[Float(0), Float(0)], [Float(0), Float(500)]], varToChange: .PMT),
-        12: Decision(choicesQty: 2, choicesLabel: ["Assinaria o pacote de televisão", "Gastaria apenas com a namorada"], question: "Qual seria a sua escolha?", answers: [[Float(0), Float(150)], [Float(0), Float(600)]], varToChange: .PMT),
-        15: Decision(choicesQty: 2, choicesLabel: ["Pegaria o presente do pai e pouparia", "Compraria a moto"], question: "Qual seria a sua atitude?", answers: [[Float(13500), Float(900)], [Float(0), Float(900)]], varToChange: .VF)
+        3: Decision(choicesQty: 3, choicesLabel: ["Conservador", "Moderado", "Agressivo"], question: "Sabendo disso, qual você acha que seria o perfil de investidor de João?", answers: [[PerfisInvestidor.conservador, Float(0), Float(0)], [PerfisInvestidor.moderado, Float(0), Float(0)], [PerfisInvestidor.agressivo, Float(0), Float(0)]]),
+        5: Decision(choicesQty: 2, choicesLabel: ["Compraria o computador", "Pouparia o dinheiro"], question: "O que você faria no lugar de João?", answers: [[PerfisInvestidor.nenhum, Float(2000), Float(0)], [PerfisInvestidor.nenhum, Float(9000), Float(0)]]),
+        7: Decision(choicesQty: 2, choicesLabel: ["Sairia com os amigos", "Guardaria a mesada"], question: "Qual decisão você tomaria no lugar de João?", answers: [[PerfisInvestidor.nenhum, Float(0), Float(0)], [PerfisInvestidor.nenhum, Float(0), Float(500)]]),
+        12: Decision(choicesQty: 2, choicesLabel: ["Assinaria o pacote de televisão", "Gastaria apenas com a namorada"], question: "Qual seria a sua escolha?", answers: [[PerfisInvestidor.nenhum, Float(0), Float(150)], [PerfisInvestidor.nenhum, Float(0), Float(600)]]),
+        15: Decision(choicesQty: 2, choicesLabel: ["Pegaria o presente do pai e pouparia", "Compraria a moto"], question: "Qual seria a sua atitude?", answers: [[PerfisInvestidor.nenhum, Float(13500), Float(900)], [PerfisInvestidor.nenhum, Float(0), Float(900)]])
     ]
     
-    let yieldList = [
+    let timePastList = [
         7: 6,
         12: 12,
         15: 24
@@ -43,7 +43,7 @@ class GameManager {
     var control = 0,
         FV: Float = 0.0,
         PMT: Float = 0.0,
-        perfilInvestidor: PerfisInvestidor = .conservador
+        perfilInvestidor: PerfisInvestidor = .nenhum
     
     let i: () -> Float = {
         switch shared.perfilInvestidor {
@@ -53,6 +53,8 @@ class GameManager {
             return 0.04
         case .agressivo:
             return 0.06
+        case .nenhum:
+            return 0.0
         }
     }
 }
