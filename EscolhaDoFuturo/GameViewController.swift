@@ -6,6 +6,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var storyTextView: UITextView!
     @IBOutlet weak var currentBalance: UILabel!
     @IBOutlet weak var currentMonthlyIncome: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +16,16 @@ class GameViewController: UIViewController {
     }
     
     func updateGameView() {
-        storyTextView.text = GameManager.shared.textsList[GameManager.shared.control]
+        if GameManager.shared.control < GameManager.shared.textsList.count {
+            storyTextView.text = GameManager.shared.textsList[GameManager.shared.control]
+        } else if GameManager.shared.control == GameManager.shared.textsList.count {
+            storyTextView.text = GameManager.shared.finalSceneList()
+        } else {
+            storyTextView.text = GameManager.moralScenesList[GameManager.shared.control - GameManager.shared.textsList.count - 1]
+            if storyTextView.text == "End" {
+                nextButton.removeFromSuperview()
+            }
+        }
         currentBalance.text = "\(GameManager.shared.FV)"
         currentMonthlyIncome.text = "\(GameManager.shared.PMT)"
         GameManager.shared.control += 1
@@ -27,6 +37,7 @@ class GameViewController: UIViewController {
         }
         GameManager.shared.FV += GameManager.shared.decisionsList[GameManager.shared.control]?.answers[index][1] as! Float
         GameManager.shared.PMT += GameManager.shared.decisionsList[GameManager.shared.control]?.answers[index][2] as! Float
+        GameManager.shared.hasMoto = GameManager.shared.decisionsList[GameManager.shared.control]?.answers[index][3] as! Bool
         if let yieldN = GameManager.shared.timePastList[GameManager.shared.control] {
             self.getNewFV(n: yieldN)
         }

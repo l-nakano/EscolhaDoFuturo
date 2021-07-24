@@ -84,6 +84,7 @@
                     <connections>
                         <outlet property="currentBalance" destination="aAo-6B-L7u" id="8G2-Pf-6I6"/>
                         <outlet property="currentMonthlyIncome" destination="Cqb-lf-Ngu" id="J1m-le-K2O"/>
+                        <outlet property="nextButton" destination="KQ6-J7-fjP" id="E19-2f-lHA"/>
                         <outlet property="storyTextView" destination="3kq-7O-ao4" id="5yr-ly-Zgv"/>
                         <outlet property="storyView" destination="h9I-5o-SbU" id="MtR-IV-W6f"/>
                     </connections>
