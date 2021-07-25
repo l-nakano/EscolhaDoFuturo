@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yrJ-oD-seX">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +12,7 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController storyboardIdentifier="Game" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BV1-FR-VrT" customClass="GameViewController" customModule="EscolhaDoFuturo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Game" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BV1-FR-VrT" customClass="GameViewController" customModule="EscolhaDoFuturo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,38 +23,40 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9I-5o-SbU" userLabel="StoryView">
                                 <rect key="frame" x="50" y="321.33333333333331" width="290" height="201.33333333333331"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kq-7O-ao4" userLabel="StoryTextView">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kq-7O-ao4" userLabel="StoryTextView">
                                         <rect key="frame" x="25" y="15" width="240" height="171.33333333333334"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <mutableString key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                                <attributes>
-                                                    <color key="NSColor" systemColor="labelColor"/>
-                                                    <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                        <color key="backgroundColor" name="iPadViewColor"/>
+                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ6-J7-fjP">
-                                        <rect key="frame" x="243" y="170.33333333333337" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ6-J7-fjP">
+                                        <rect key="frame" x="238" y="166.33333333333337" width="42" height="25"/>
+                                        <state key="normal" image="nextButton"/>
                                         <connections>
                                             <action selector="nextButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="TVg-Tn-6X2"/>
                                         </connections>
                                     </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGI-9G-haU">
+                                        <rect key="frame" x="130.66666666666666" y="162.66666666666669" width="28.666666666666657" height="32"/>
+                                        <state key="normal" image="restartButton"/>
+                                        <connections>
+                                            <action selector="restartButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="nvZ-Ua-Yrl"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="iPadViewColor"/>
                                 <constraints>
                                     <constraint firstItem="3kq-7O-ao4" firstAttribute="width" secondItem="h9I-5o-SbU" secondAttribute="height" multiplier="80:67" id="2Ao-IL-Rsp"/>
                                     <constraint firstItem="3kq-7O-ao4" firstAttribute="centerX" secondItem="h9I-5o-SbU" secondAttribute="centerX" id="51U-wy-NAs"/>
                                     <constraint firstAttribute="width" secondItem="h9I-5o-SbU" secondAttribute="height" multiplier="147:102" id="82D-gZ-XXS"/>
                                     <constraint firstItem="KQ6-J7-fjP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="h9I-5o-SbU" secondAttribute="leading" constant="20" symbolic="YES" id="LjU-67-9xG"/>
                                     <constraint firstItem="3kq-7O-ao4" firstAttribute="top" secondItem="h9I-5o-SbU" secondAttribute="top" constant="15" id="W41-xH-dk8"/>
-                                    <constraint firstAttribute="trailing" secondItem="KQ6-J7-fjP" secondAttribute="trailing" constant="1" id="iD0-N0-jnA"/>
+                                    <constraint firstAttribute="trailing" secondItem="KQ6-J7-fjP" secondAttribute="trailing" constant="10" id="iD0-N0-jnA"/>
                                     <constraint firstItem="3kq-7O-ao4" firstAttribute="centerY" secondItem="h9I-5o-SbU" secondAttribute="centerY" id="ndG-Pi-S9R"/>
-                                    <constraint firstAttribute="bottom" secondItem="KQ6-J7-fjP" secondAttribute="bottom" constant="1" id="qeh-oR-jOp"/>
+                                    <constraint firstAttribute="bottom" secondItem="KQ6-J7-fjP" secondAttribute="bottom" constant="10" id="qeh-oR-jOp"/>
+                                    <constraint firstItem="RGI-9G-haU" firstAttribute="centerY" secondItem="KQ6-J7-fjP" secondAttribute="centerY" id="sJq-SS-gyU"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAo-6B-L7u" userLabel="CurrentBalance">
@@ -104,12 +107,14 @@
                             <constraint firstItem="F28-vI-phK" firstAttribute="bottom" secondItem="Cqb-lf-Ngu" secondAttribute="bottom" constant="169" id="sb8-Mk-siB"/>
                             <constraint firstItem="h9I-5o-SbU" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="tJ2-CF-1Cq"/>
                             <constraint firstAttribute="bottom" secondItem="gFr-i2-ugb" secondAttribute="bottom" id="vKs-DE-k9x"/>
+                            <constraint firstItem="RGI-9G-haU" firstAttribute="centerX" secondItem="F28-vI-phK" secondAttribute="centerX" id="zGx-qm-zTl"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="currentBalance" destination="aAo-6B-L7u" id="8G2-Pf-6I6"/>
                         <outlet property="currentMonthlyIncome" destination="Cqb-lf-Ngu" id="J1m-le-K2O"/>
                         <outlet property="nextButton" destination="KQ6-J7-fjP" id="E19-2f-lHA"/>
+                        <outlet property="restartButton" destination="RGI-9G-haU" id="BRK-MZ-0QI"/>
                         <outlet property="storyTextView" destination="3kq-7O-ao4" id="5yr-ly-Zgv"/>
                         <outlet property="storyView" destination="h9I-5o-SbU" id="MtR-IV-W6f"/>
                     </connections>
@@ -126,42 +131,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyz-J1-Vjh" userLabel="DecisionTextView">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Sabendo disso, qual você acha que seria o perfil de investidor de João?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyz-J1-Vjh" userLabel="DecisionTextView">
                                 <rect key="frame" x="0.0" y="10" width="390" height="824"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Sabendo disso, qual você acha que seria o perfil de investidor de João?">
-                                        <attributes>
-                                            <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <color key="backgroundColor" name="iPadViewColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nho-MZ-s6F">
-                                <rect key="frame" x="151" y="685" width="88" height="110"/>
+                                <rect key="frame" x="149" y="685" width="92" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ff3-9h-PNY" userLabel="Decisao1">
-                                        <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Conservador"/>
                                         <connections>
                                             <action selector="firstChoiceButton:" destination="qcT-40-lkw" eventType="touchUpInside" id="Vba-kt-Kby"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2u-Aa-BZY" userLabel="Decisao2">
-                                        <rect key="frame" x="0.0" y="40" width="88" height="30"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <rect key="frame" x="0.0" y="40" width="92" height="30"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Agressivo"/>
                                         <connections>
                                             <action selector="thirdChoiceButton:" destination="qcT-40-lkw" eventType="touchUpInside" id="Ql8-mP-idI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9X-Xi-977" userLabel="Decisao3">
-                                        <rect key="frame" x="0.0" y="80" width="88" height="30"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <rect key="frame" x="0.0" y="80" width="92" height="30"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Moderado"/>
                                         <connections>
                                             <action selector="secondChoiceButton:" destination="qcT-40-lkw" eventType="touchUpInside" id="SJN-kT-yBq"/>
@@ -171,7 +172,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JSv-fG-l16"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="iPadViewColor"/>
                         <constraints>
                             <constraint firstItem="zyz-J1-Vjh" firstAttribute="centerY" secondItem="aor-4h-oNQ" secondAttribute="centerY" id="4lM-M2-3pL"/>
                             <constraint firstItem="zyz-J1-Vjh" firstAttribute="width" secondItem="aor-4h-oNQ" secondAttribute="width" id="ev7-6Y-tyf"/>
@@ -202,7 +203,7 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOq-6e-gmN" userLabel="DecisionTextView">
                                 <rect key="frame" x="0.0" y="10" width="390" height="824"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="iPadViewColor"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Sabendo disso, qual você acha que seria o perfil de investidor de João?">
                                         <attributes>
@@ -215,19 +216,21 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6KO-kv-66N">
-                                <rect key="frame" x="151" y="725" width="88" height="70"/>
+                                <rect key="frame" x="149" y="725" width="92" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjW-HL-tNE" userLabel="Decisao1">
-                                        <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Conservador"/>
                                         <connections>
                                             <action selector="firstChoiceButton:" destination="oxo-yL-2AU" eventType="touchUpInside" id="tMZ-6N-bPM"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uo-BE-sbU" userLabel="Decisao2">
-                                        <rect key="frame" x="0.0" y="40" width="88" height="30"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <rect key="frame" x="0.0" y="40" width="92" height="30"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Agressivo"/>
                                         <connections>
                                             <action selector="secondChoiceButton:" destination="oxo-yL-2AU" eventType="touchUpInside" id="fG8-8G-pyg"/>
@@ -237,7 +240,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1sO-xQ-thc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="iPadViewColor"/>
                         <constraints>
                             <constraint firstItem="1sO-xQ-thc" firstAttribute="bottom" secondItem="6KO-kv-66N" secondAttribute="bottom" constant="15" id="4ds-V6-ojb"/>
                             <constraint firstItem="6KO-kv-66N" firstAttribute="centerX" secondItem="1sO-xQ-thc" secondAttribute="centerX" id="50A-21-ny5"/>
@@ -257,17 +260,68 @@
             </objects>
             <point key="canvasLocation" x="1524.6153846153845" y="113.74407582938387"/>
         </scene>
+        <!--Initial Screen View Controller-->
+        <scene sceneID="aHz-VG-bsh">
+            <objects>
+                <viewController id="yrJ-oD-seX" customClass="InitialScreenViewController" customModule="EscolhaDoFuturo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hRA-jA-b4W">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InitialScreen" translatesAutoresizingMaskIntoConstraints="NO" id="0Rl-Vr-NUa">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="P7G-bJ-r6F" appends="YES" id="vmb-fS-rfO"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressione para dar o primeiro passo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCq-j5-sY6">
+                                <rect key="frame" x="31.333333333333343" y="778" width="327.66666666666663" height="22"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="19"/>
+                                <color key="textColor" name="LabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Rl-Vr-NUa" firstAttribute="height" secondItem="hRA-jA-b4W" secondAttribute="height" id="Dah-b5-knA"/>
+                            <constraint firstItem="0Rl-Vr-NUa" firstAttribute="width" secondItem="hRA-jA-b4W" secondAttribute="width" id="F2n-AV-qPz"/>
+                            <constraint firstItem="0Rl-Vr-NUa" firstAttribute="centerY" secondItem="hRA-jA-b4W" secondAttribute="centerY" id="Wo3-2d-zY5"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="UCq-j5-sY6" secondAttribute="bottom" constant="10" id="YVs-Zg-lAl"/>
+                            <constraint firstItem="UCq-j5-sY6" firstAttribute="centerX" secondItem="hRA-jA-b4W" secondAttribute="centerX" id="ZqC-jU-aMQ"/>
+                            <constraint firstItem="0Rl-Vr-NUa" firstAttribute="centerX" secondItem="hRA-jA-b4W" secondAttribute="centerX" id="doc-S0-Gqu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="UCq-j5-sY6" id="UbP-PR-m6G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bsW-bO-sgL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="P7G-bJ-r6F">
+                    <connections>
+                        <action selector="handleTapGesture:" destination="yrJ-oD-seX" id="VId-hY-V2F"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-585" y="114"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background" width="332" height="664"/>
+        <image name="InitialScreen" width="332" height="664"/>
+        <image name="nextButton" width="42" height="25"/>
+        <image name="restartButton" width="28.5" height="32"/>
+        <namedColor name="LabelColor">
+            <color red="0.96078431372549022" green="0.5490196078431373" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="iPadViewColor">
+            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

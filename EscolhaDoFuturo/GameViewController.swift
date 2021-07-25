@@ -7,22 +7,34 @@ class GameViewController: UIViewController {
     @IBOutlet weak var currentBalance: UILabel!
     @IBOutlet weak var currentMonthlyIncome: UILabel!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var restartButton: UIButton!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        updateGameView()
+        currentBalance.appear()
+        currentMonthlyIncome.appear()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        storyTextView.text = GameManager.shared.textsList[0]
     }
     
     func updateGameView() {
         if GameManager.shared.control < GameManager.shared.textsList.count {
             storyTextView.text = GameManager.shared.textsList[GameManager.shared.control]
+            storyTextView.appear()
         } else if GameManager.shared.control == GameManager.shared.textsList.count {
             storyTextView.text = GameManager.shared.finalSceneList()
+            storyTextView.appear()
         } else {
             storyTextView.text = GameManager.moralScenesList[GameManager.shared.control - GameManager.shared.textsList.count - 1]
-            if storyTextView.text == "End" {
-                nextButton.removeFromSuperview()
+            storyTextView.appear()
+            if storyTextView.text == GameManager.moralScenesList.last {
+                nextButton.isHidden = true
+                restartButton.isHidden = false
             }
         }
         currentBalance.text = "\(GameManager.shared.FV.currencyBR)"
@@ -107,5 +119,16 @@ class GameViewController: UIViewController {
         } else {
             updateGameView()
         }
+    }
+    
+    @IBAction func restartButton(_ sender: UIButton) {
+        nextButton.isHidden = false
+        restartButton.isHidden = true
+        GameManager.shared.control = 0
+        GameManager.shared.FV = 9000.0
+        GameManager.shared.PMT = 0.0
+        GameManager.shared.hasMoto = false
+        GameManager.shared.perfilInvestidor = .nenhum
+        self.updateGameView()
     }
 }

@@ -15,6 +15,7 @@
 		AF32105626A8C8310092F903 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF32105526A8C8310092F903 /* GameViewController.swift */; };
 		AF32105926A8C8310092F903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF32105726A8C8310092F903 /* Main.storyboard */; };
 		AF32105B26A8C8320092F903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF32105A26A8C8320092F903 /* Assets.xcassets */; };
+		AF79759F26ADC15500C4EF51 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF79759E26ADC15500C4EF51 /* InitialScreenViewController.swift */; };
 		AF9CD04F26ACD11000C3911F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9CD04E26ACD11000C3911F /* Extensions.swift */; };
 		AFA0DD9926AB2C6A00618724 /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA0DD9826AB2C6A00618724 /* Decision.swift */; };
 		AFA0DD9B26AB460D00618724 /* TwoChoicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA0DD9A26AB460D00618724 /* TwoChoicesViewController.swift */; };
@@ -31,6 +32,7 @@
 		AF32105826A8C8310092F903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF32105A26A8C8320092F903 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF32105C26A8C8320092F903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF79759E26ADC15500C4EF51 /* InitialScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
 		AF9CD04E26ACD11000C3911F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AFA0DD9826AB2C6A00618724 /* Decision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decision.swift; sourceTree = "<group>"; };
 		AFA0DD9A26AB460D00618724 /* TwoChoicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoChoicesViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			children = (
 				AF32104D26A8C8310092F903 /* AppDelegate.swift */,
 				AF32105126A8C8310092F903 /* Actions.sks */,
+				AF79759E26ADC15500C4EF51 /* InitialScreenViewController.swift */,
 				AF3056FB26A9F19E00830EEB /* ThreeChoicesViewController.swift */,
 				AFA0DD9A26AB460D00618724 /* TwoChoicesViewController.swift */,
 				AF32105526A8C8310092F903 /* GameViewController.swift */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3056FC26A9F19E00830EEB /* ThreeChoicesViewController.swift in Sources */,
+				AF79759F26ADC15500C4EF51 /* InitialScreenViewController.swift in Sources */,
 				AF32105626A8C8310092F903 /* GameViewController.swift in Sources */,
 				AFA0DD9926AB2C6A00618724 /* Decision.swift in Sources */,
 				AF9CD04F26ACD11000C3911F /* Extensions.swift in Sources */,

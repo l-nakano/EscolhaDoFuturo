@@ -11,7 +11,26 @@ class ThreeChoicesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        refreshView()
+    }
+    
+    func refreshView() {
+        let buttonsList = [firstButton, secondButton, thirdButton],
+            currentDecisionList = GameManager.shared.decisionsList[GameManager.shared.control]!
+        
+        for (index, button) in buttonsList.enumerated() {
+            button!.layer.borderWidth = 1
+            button!.layer.borderColor = UIColor(named: "ButtonBorderColor")?.cgColor
+            button!.layer.backgroundColor = UIColor(named: "ButtonColor")?.cgColor
+            button!.layer.cornerRadius = 10
+            button!.contentEdgeInsets = .init(top: 5, left: 5, bottom: 5, right: 5)
+            button!.setTitleColor(UIColor(ciColor: .white), for: .normal)
+            button!.setTitle(currentDecisionList.choicesLabel[index], for: .normal)
+            button!.appear()
+        }
+        decisionTextView.text = currentDecisionList.question
+        decisionTextView.appear()
     }
     
     @IBAction func firstChoiceButton(_ sender: UIButton) {
@@ -29,14 +48,6 @@ class ThreeChoicesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         refreshView()
-    }
-    
-    func refreshView() {
-        let currentDecisionList = GameManager.shared.decisionsList[GameManager.shared.control]!
-        decisionTextView.text = currentDecisionList.question
-        firstButton.setTitle(currentDecisionList.choicesLabel[0], for: .normal)
-        secondButton.setTitle(currentDecisionList.choicesLabel[1], for: .normal)
-        thirdButton.setTitle(currentDecisionList.choicesLabel[2], for: .normal)
     }
 
     /*

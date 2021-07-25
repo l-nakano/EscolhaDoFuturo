@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 extension Formatter {
     static let number = NumberFormatter()
@@ -15,4 +15,16 @@ extension Numeric {
         return Formatter.number.string(for: self) ?? ""
     }
     var currencyBR: String { formatted(style: .currency, locale: .portuguesBR) }
+}
+
+extension UIView {
+    func blink() {
+        self.alpha = 0.2
+        UIView.animate(withDuration: 1, delay: 0.0, options: [.curveLinear, .repeat, .autoreverse], animations: {self.alpha = 1.0}, completion: nil)
+    }
+    
+    func appear() {
+        self.alpha = 0.0
+        UIView.animate(withDuration: 1.5, delay: 0.0, options: [.curveLinear], animations: {self.alpha = 1.0}, completion: nil)
+    }
 }
