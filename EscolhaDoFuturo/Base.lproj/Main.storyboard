@@ -22,12 +22,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9I-5o-SbU" userLabel="StoryView">
                                 <rect key="frame" x="50" y="321.33333333333331" width="290" height="201.33333333333331"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3kq-7O-ao4" userLabel="StoryTextView">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kq-7O-ao4" userLabel="StoryTextView">
                                         <rect key="frame" x="25" y="15" width="240" height="171.33333333333334"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <mutableString key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                <attributes>
+                                                    <color key="NSColor" systemColor="labelColor"/>
+                                                    <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ6-J7-fjP">
@@ -50,33 +56,52 @@
                                     <constraint firstAttribute="bottom" secondItem="KQ6-J7-fjP" secondAttribute="bottom" constant="1" id="qeh-oR-jOp"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAo-6B-L7u" userLabel="CurrentBalance">
-                                <rect key="frame" x="50" y="625" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAo-6B-L7u" userLabel="CurrentBalance">
+                                <rect key="frame" x="40" y="629.66666666666663" width="34.333333333333343" height="16.333333333333371"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="SFCompactText-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqb-lf-Ngu" userLabel="CurrentMonthlyIncome">
-                                <rect key="frame" x="148" y="167" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqb-lf-Ngu" userLabel="CurrentMonthlyIncome">
+                                <rect key="frame" x="220" y="624.66666666666663" width="25.333333333333343" height="16.333333333333371"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <attributedString key="attributedText">
+                                    <fragment content="480">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="Menlo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F28-vI-phK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="F28-vI-phK" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Cqb-lf-Ngu" secondAttribute="trailing" symbolic="YES" id="4Kd-jn-QRV"/>
-                            <constraint firstItem="Cqb-lf-Ngu" firstAttribute="top" secondItem="F28-vI-phK" secondAttribute="top" constant="123" id="DyX-aX-bng"/>
+                            <constraint firstItem="Cqb-lf-Ngu" firstAttribute="leading" secondItem="F28-vI-phK" secondAttribute="leading" constant="220" id="5lm-jI-XAR"/>
+                            <constraint firstItem="F28-vI-phK" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Cqb-lf-Ngu" secondAttribute="trailing" symbolic="YES" id="CSF-e3-1dI"/>
                             <constraint firstItem="h9I-5o-SbU" firstAttribute="width" secondItem="gFr-i2-ugb" secondAttribute="height" multiplier="145:422" id="Q6I-gV-bp1"/>
                             <constraint firstItem="h9I-5o-SbU" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="c2W-kx-ZSz"/>
-                            <constraint firstItem="Cqb-lf-Ngu" firstAttribute="leading" secondItem="F28-vI-phK" secondAttribute="leading" constant="148" id="dDG-B1-OB5"/>
                             <constraint firstAttribute="trailing" secondItem="gFr-i2-ugb" secondAttribute="trailing" id="eTX-pB-Oht"/>
                             <constraint firstItem="gFr-i2-ugb" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="h8t-Nf-qdL"/>
                             <constraint firstItem="gFr-i2-ugb" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="hXu-Ai-vgl"/>
                             <constraint firstItem="F28-vI-phK" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aAo-6B-L7u" secondAttribute="trailing" symbolic="YES" id="ixQ-bf-Kzr"/>
-                            <constraint firstItem="aAo-6B-L7u" firstAttribute="leading" secondItem="h9I-5o-SbU" secondAttribute="leading" id="n3A-vX-5m8"/>
+                            <constraint firstItem="aAo-6B-L7u" firstAttribute="leading" secondItem="h9I-5o-SbU" secondAttribute="leading" constant="-10" id="n3A-vX-5m8"/>
                             <constraint firstItem="F28-vI-phK" firstAttribute="bottom" secondItem="aAo-6B-L7u" secondAttribute="bottom" constant="164" id="pP4-RG-R6Y"/>
+                            <constraint firstItem="F28-vI-phK" firstAttribute="bottom" secondItem="Cqb-lf-Ngu" secondAttribute="bottom" constant="169" id="sb8-Mk-siB"/>
                             <constraint firstItem="h9I-5o-SbU" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="tJ2-CF-1Cq"/>
                             <constraint firstAttribute="bottom" secondItem="gFr-i2-ugb" secondAttribute="bottom" id="vKs-DE-k9x"/>
                         </constraints>
@@ -101,56 +126,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Sabendo disso, qual você acha que seria o perfil de investidor de João?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zyz-J1-Vjh" userLabel="DecisionTextView">
-                                <rect key="frame" x="0.0" y="20" width="390" height="804"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyz-J1-Vjh" userLabel="DecisionTextView">
+                                <rect key="frame" x="0.0" y="10" width="390" height="824"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Sabendo disso, qual você acha que seria o perfil de investidor de João?">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ff3-9h-PNY" userLabel="Decisao1">
-                                <rect key="frame" x="26" y="710" width="88" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Conservador"/>
-                                <connections>
-                                    <action selector="firstChoiceButton:" destination="qcT-40-lkw" eventType="touchUpInside" id="Vba-kt-Kby"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2u-Aa-BZY" userLabel="Decisao2">
-                                <rect key="frame" x="151" y="760" width="88" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Agressivo"/>
-                                <connections>
-                                    <action selector="thirdChoiceButton:" destination="qcT-40-lkw" eventType="touchUpInside" id="Ql8-mP-idI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9X-Xi-977" userLabel="Decisao3">
-                                <rect key="frame" x="276" y="710" width="88" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Moderado"/>
-                                <connections>
-                                    <action selector="secondChoiceButton:" destination="qcT-40-lkw" eventType="touchUpInside" id="SJN-kT-yBq"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nho-MZ-s6F">
+                                <rect key="frame" x="151" y="685" width="88" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ff3-9h-PNY" userLabel="Decisao1">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Conservador"/>
+                                        <connections>
+                                            <action selector="firstChoiceButton:" destination="qcT-40-lkw" eventType="touchUpInside" id="Vba-kt-Kby"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2u-Aa-BZY" userLabel="Decisao2">
+                                        <rect key="frame" x="0.0" y="40" width="88" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Agressivo"/>
+                                        <connections>
+                                            <action selector="thirdChoiceButton:" destination="qcT-40-lkw" eventType="touchUpInside" id="Ql8-mP-idI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9X-Xi-977" userLabel="Decisao3">
+                                        <rect key="frame" x="0.0" y="80" width="88" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Moderado"/>
+                                        <connections>
+                                            <action selector="secondChoiceButton:" destination="qcT-40-lkw" eventType="touchUpInside" id="SJN-kT-yBq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JSv-fG-l16"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="V2u-Aa-BZY" firstAttribute="height" secondItem="Ff3-9h-PNY" secondAttribute="height" id="0Rg-iZ-SXn"/>
                             <constraint firstItem="zyz-J1-Vjh" firstAttribute="centerY" secondItem="aor-4h-oNQ" secondAttribute="centerY" id="4lM-M2-3pL"/>
-                            <constraint firstItem="Ff3-9h-PNY" firstAttribute="leading" secondItem="aor-4h-oNQ" secondAttribute="leadingMargin" constant="10" id="DgK-z1-cIs"/>
-                            <constraint firstItem="A9X-Xi-977" firstAttribute="height" secondItem="Ff3-9h-PNY" secondAttribute="height" id="KwV-Hd-Wur"/>
-                            <constraint firstItem="A9X-Xi-977" firstAttribute="width" secondItem="Ff3-9h-PNY" secondAttribute="width" id="U5y-GW-I6P"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="A9X-Xi-977" secondAttribute="trailing" constant="10" id="bIn-c5-E2Y"/>
-                            <constraint firstItem="V2u-Aa-BZY" firstAttribute="width" secondItem="Ff3-9h-PNY" secondAttribute="width" id="cFm-XL-tIk"/>
-                            <constraint firstItem="V2u-Aa-BZY" firstAttribute="centerX" secondItem="aor-4h-oNQ" secondAttribute="centerX" id="cvR-Mb-d10"/>
                             <constraint firstItem="zyz-J1-Vjh" firstAttribute="width" secondItem="aor-4h-oNQ" secondAttribute="width" id="ev7-6Y-tyf"/>
-                            <constraint firstItem="zyz-J1-Vjh" firstAttribute="top" secondItem="aor-4h-oNQ" secondAttribute="top" constant="20" id="neU-lZ-DgC"/>
+                            <constraint firstItem="JSv-fG-l16" firstAttribute="bottom" secondItem="nho-MZ-s6F" secondAttribute="bottom" constant="15" id="k2b-as-eu7"/>
+                            <constraint firstItem="zyz-J1-Vjh" firstAttribute="top" secondItem="aor-4h-oNQ" secondAttribute="top" constant="10" id="neU-lZ-DgC"/>
+                            <constraint firstItem="nho-MZ-s6F" firstAttribute="centerX" secondItem="JSv-fG-l16" secondAttribute="centerX" id="pWp-GB-0Mb"/>
                             <constraint firstItem="zyz-J1-Vjh" firstAttribute="centerX" secondItem="aor-4h-oNQ" secondAttribute="centerX" id="sGE-Mb-2py"/>
-                            <constraint firstItem="A9X-Xi-977" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ff3-9h-PNY" secondAttribute="trailing" constant="8" symbolic="YES" id="v4f-ph-Tfe"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Ff3-9h-PNY" secondAttribute="bottom" constant="70" id="wXC-cM-SPI"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="A9X-Xi-977" secondAttribute="bottom" constant="70" id="wmX-jy-d5k"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="V2u-Aa-BZY" secondAttribute="bottom" constant="20" id="zIb-8t-IUk"/>
                         </constraints>
                     </view>
                     <connections>
@@ -172,43 +200,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Sabendo disso, qual você acha que seria o perfil de investidor de João?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MOq-6e-gmN" userLabel="DecisionTextView">
-                                <rect key="frame" x="0.0" y="24" width="390" height="796"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOq-6e-gmN" userLabel="DecisionTextView">
+                                <rect key="frame" x="0.0" y="10" width="390" height="824"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Sabendo disso, qual você acha que seria o perfil de investidor de João?">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjW-HL-tNE" userLabel="Decisao1">
-                                <rect key="frame" x="151" y="412" width="88" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Conservador"/>
-                                <connections>
-                                    <action selector="firstChoiceButton:" destination="oxo-yL-2AU" eventType="touchUpInside" id="tMZ-6N-bPM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uo-BE-sbU" userLabel="Decisao2">
-                                <rect key="frame" x="151" y="459" width="88" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Agressivo"/>
-                                <connections>
-                                    <action selector="secondChoiceButton:" destination="oxo-yL-2AU" eventType="touchUpInside" id="fG8-8G-pyg"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6KO-kv-66N">
+                                <rect key="frame" x="151" y="725" width="88" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjW-HL-tNE" userLabel="Decisao1">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Conservador"/>
+                                        <connections>
+                                            <action selector="firstChoiceButton:" destination="oxo-yL-2AU" eventType="touchUpInside" id="tMZ-6N-bPM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uo-BE-sbU" userLabel="Decisao2">
+                                        <rect key="frame" x="0.0" y="40" width="88" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Agressivo"/>
+                                        <connections>
+                                            <action selector="secondChoiceButton:" destination="oxo-yL-2AU" eventType="touchUpInside" id="fG8-8G-pyg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1sO-xQ-thc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1sO-xQ-thc" firstAttribute="bottom" secondItem="6KO-kv-66N" secondAttribute="bottom" constant="15" id="4ds-V6-ojb"/>
+                            <constraint firstItem="6KO-kv-66N" firstAttribute="centerX" secondItem="1sO-xQ-thc" secondAttribute="centerX" id="50A-21-ny5"/>
                             <constraint firstItem="MOq-6e-gmN" firstAttribute="centerY" secondItem="7tv-ed-US9" secondAttribute="centerY" id="5mq-ml-c1x"/>
-                            <constraint firstItem="jjW-HL-tNE" firstAttribute="centerX" secondItem="1sO-xQ-thc" secondAttribute="centerX" id="BQy-f4-38R"/>
-                            <constraint firstItem="jjW-HL-tNE" firstAttribute="centerY" secondItem="1sO-xQ-thc" secondAttribute="centerY" id="M7N-EA-SzV"/>
-                            <constraint firstAttribute="top" secondItem="MOq-6e-gmN" secondAttribute="top" constant="-24" id="QWq-gh-qDa"/>
-                            <constraint firstItem="8uo-BE-sbU" firstAttribute="centerX" secondItem="jjW-HL-tNE" secondAttribute="centerX" id="UF5-ot-vWH"/>
-                            <constraint firstItem="8uo-BE-sbU" firstAttribute="height" secondItem="jjW-HL-tNE" secondAttribute="height" id="aXN-pw-sIk"/>
-                            <constraint firstItem="8uo-BE-sbU" firstAttribute="width" secondItem="jjW-HL-tNE" secondAttribute="width" id="az2-P0-ti7"/>
                             <constraint firstItem="MOq-6e-gmN" firstAttribute="width" secondItem="7tv-ed-US9" secondAttribute="width" id="cca-ic-Osy"/>
                             <constraint firstItem="MOq-6e-gmN" firstAttribute="centerX" secondItem="7tv-ed-US9" secondAttribute="centerX" id="hk5-98-lkc"/>
-                            <constraint firstItem="8uo-BE-sbU" firstAttribute="top" secondItem="jjW-HL-tNE" secondAttribute="bottom" constant="17" id="qJ5-QE-t51"/>
+                            <constraint firstItem="MOq-6e-gmN" firstAttribute="top" secondItem="7tv-ed-US9" secondAttribute="top" constant="10" id="qtx-lH-zgS"/>
                         </constraints>
                     </view>
                     <connections>
@@ -219,11 +255,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="csk-hs-W4C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="114"/>
+            <point key="canvasLocation" x="1524.6153846153845" y="113.74407582938387"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Background" width="205" height="410"/>
+        <image name="Background" width="332" height="664"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

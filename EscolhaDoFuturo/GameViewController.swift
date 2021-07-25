@@ -12,7 +12,6 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         storyTextView.text = GameManager.shared.textsList[0]
-        currentMonthlyIncome.transform = currentMonthlyIncome.transform.rotated(by: .pi/2)
     }
     
     func updateGameView() {
@@ -26,8 +25,8 @@ class GameViewController: UIViewController {
                 nextButton.removeFromSuperview()
             }
         }
-        currentBalance.text = "\(GameManager.shared.FV)"
-        currentMonthlyIncome.text = "\(GameManager.shared.PMT)"
+        currentBalance.text = "\(GameManager.shared.FV.currencyBR)"
+        currentMonthlyIncome.text = "\(String(format: "%.2f", GameManager.shared.PMT))"
         GameManager.shared.control += 1
     }
     
