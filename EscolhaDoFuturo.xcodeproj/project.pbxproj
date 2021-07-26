@@ -49,6 +49,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF2E144D26AEF4E20061A395 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF79759E26ADC15500C4EF51 /* OnboardingScreenViewController.swift */,
+				AF3056FB26A9F19E00830EEB /* ThreeChoicesViewController.swift */,
+				AFA0DD9A26AB460D00618724 /* TwoChoicesViewController.swift */,
+				AF32105526A8C8310092F903 /* GameViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AF2E144E26AEF4F30061A395 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF3056F926A9E90F00830EEB /* GameManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF2E144F26AEF5330061A395 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF32105726A8C8310092F903 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF2E145026AEF54F0061A395 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AFA0DD9826AB2C6A00618724 /* Decision.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AF2E145126AEF5620061A395 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				AF9CD04E26ACD11000C3911F /* Extensions.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		AF2E145226AEF5B00061A395 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				AF3056FD26AA1D5D00830EEB /* Enums.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		AF32104126A8C8310092F903 = {
 			isa = PBXGroup;
 			children = (
@@ -68,19 +119,16 @@
 		AF32104C26A8C8310092F903 /* EscolhaDoFuturo */ = {
 			isa = PBXGroup;
 			children = (
+				AF2E145226AEF5B00061A395 /* General */,
+				AF2E145126AEF5620061A395 /* Modifiers */,
+				AF2E145026AEF54F0061A395 /* Classes */,
+				AF2E144E26AEF4F30061A395 /* Models */,
+				AF2E144F26AEF5330061A395 /* Views */,
+				AF2E144D26AEF4E20061A395 /* Controllers */,
 				AF32104D26A8C8310092F903 /* AppDelegate.swift */,
 				AF32105126A8C8310092F903 /* Actions.sks */,
-				AF79759E26ADC15500C4EF51 /* OnboardingScreenViewController.swift */,
-				AF3056FB26A9F19E00830EEB /* ThreeChoicesViewController.swift */,
-				AFA0DD9A26AB460D00618724 /* TwoChoicesViewController.swift */,
-				AF32105526A8C8310092F903 /* GameViewController.swift */,
-				AF32105726A8C8310092F903 /* Main.storyboard */,
 				AF32105A26A8C8320092F903 /* Assets.xcassets */,
 				AF32105C26A8C8320092F903 /* Info.plist */,
-				AF3056F926A9E90F00830EEB /* GameManager.swift */,
-				AF3056FD26AA1D5D00830EEB /* Enums.swift */,
-				AFA0DD9826AB2C6A00618724 /* Decision.swift */,
-				AF9CD04E26ACD11000C3911F /* Extensions.swift */,
 			);
 			path = EscolhaDoFuturo;
 			sourceTree = "<group>";

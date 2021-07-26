@@ -116,6 +116,9 @@ class GameViewController: UIViewController {
             default:
                 fatalError("Não existe uma view com essa quantidade de escolhas")
             }
+        } else if GameManager.shared.changesInPMTlist.keys.contains(GameManager.shared.control) {
+            GameManager.shared.PMT += GameManager.shared.changesInPMTlist[GameManager.shared.control]!
+            updateGameView()
         } else {
             updateGameView()
         }
