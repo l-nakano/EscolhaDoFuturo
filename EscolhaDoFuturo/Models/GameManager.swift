@@ -42,7 +42,7 @@ class GameManager {
     
     static let moralScenesList = [
         "Caso você optasse por investir os \(13500.currencyBR) que seu pai lhe deu para comprar a moto e, mensalmente, investir o valor da parcela, de \(1945.72.currencyBR), ao final de 36 meses você teria \(shared.motoFV().currencyBR)",
-        "Assim, compraria a moto e sobrariam \((shared.FV - 45000).currencyBR). Dessa maneira, ele economizaria R$\((13500 + shared.PMT * 36 - 45000).currencyBR) ao não fazer o financiamento.",
+        "Assim, compraria a moto e sobrariam \((shared.FV - 45000).currencyBR). Dessa maneira, ele economizaria \((13500 + shared.PMT * 36 - 45000).currencyBR) ao não fazer o financiamento.",
         "Caso quisesse comprar a moto assim que tivesse o dinheiro à vista, você poderia comprá-la em \(shared.nPer()) meses.",
         "Um ponto muito importante que precisa ser levado em consideração por todas as pessoas é a construção de um fundo de emergência.",
         "Ele é utilizado para situações emergenciais, como o acidente que você passou, uma ajuda a um familiar, a perda da renda mensal.",
