@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InitialScreenViewController: UIViewController {
+class OnboardingScreenViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     

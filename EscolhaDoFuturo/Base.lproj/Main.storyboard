@@ -26,7 +26,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kq-7O-ao4" userLabel="StoryTextView">
                                         <rect key="frame" x="25" y="15" width="240" height="171.33333333333334"/>
                                         <color key="backgroundColor" name="iPadViewColor"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -39,7 +39,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGI-9G-haU">
-                                        <rect key="frame" x="130.66666666666666" y="162.66666666666669" width="28.666666666666657" height="32"/>
+                                        <rect key="frame" x="244.66666666666666" y="162.66666666666669" width="28.666666666666657" height="32"/>
                                         <state key="normal" image="restartButton"/>
                                         <connections>
                                             <action selector="restartButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="nvZ-Ua-Yrl"/>
@@ -52,6 +52,7 @@
                                     <constraint firstItem="3kq-7O-ao4" firstAttribute="centerX" secondItem="h9I-5o-SbU" secondAttribute="centerX" id="51U-wy-NAs"/>
                                     <constraint firstAttribute="width" secondItem="h9I-5o-SbU" secondAttribute="height" multiplier="147:102" id="82D-gZ-XXS"/>
                                     <constraint firstItem="KQ6-J7-fjP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="h9I-5o-SbU" secondAttribute="leading" constant="20" symbolic="YES" id="LjU-67-9xG"/>
+                                    <constraint firstItem="RGI-9G-haU" firstAttribute="centerX" secondItem="KQ6-J7-fjP" secondAttribute="centerX" id="Ql4-Mn-mp1"/>
                                     <constraint firstItem="3kq-7O-ao4" firstAttribute="top" secondItem="h9I-5o-SbU" secondAttribute="top" constant="15" id="W41-xH-dk8"/>
                                     <constraint firstAttribute="trailing" secondItem="KQ6-J7-fjP" secondAttribute="trailing" constant="10" id="iD0-N0-jnA"/>
                                     <constraint firstItem="3kq-7O-ao4" firstAttribute="centerY" secondItem="h9I-5o-SbU" secondAttribute="centerY" id="ndG-Pi-S9R"/>
@@ -75,7 +76,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqb-lf-Ngu" userLabel="CurrentMonthlyIncome">
-                                <rect key="frame" x="220" y="624.66666666666663" width="25.333333333333343" height="16.333333333333371"/>
+                                <rect key="frame" x="220" y="634.66666666666663" width="25.333333333333343" height="16.333333333333371"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -104,10 +105,9 @@
                             <constraint firstItem="F28-vI-phK" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aAo-6B-L7u" secondAttribute="trailing" symbolic="YES" id="ixQ-bf-Kzr"/>
                             <constraint firstItem="aAo-6B-L7u" firstAttribute="leading" secondItem="h9I-5o-SbU" secondAttribute="leading" constant="-10" id="n3A-vX-5m8"/>
                             <constraint firstItem="F28-vI-phK" firstAttribute="bottom" secondItem="aAo-6B-L7u" secondAttribute="bottom" constant="164" id="pP4-RG-R6Y"/>
-                            <constraint firstItem="F28-vI-phK" firstAttribute="bottom" secondItem="Cqb-lf-Ngu" secondAttribute="bottom" constant="169" id="sb8-Mk-siB"/>
+                            <constraint firstItem="F28-vI-phK" firstAttribute="bottom" secondItem="Cqb-lf-Ngu" secondAttribute="bottom" constant="159" id="sb8-Mk-siB"/>
                             <constraint firstItem="h9I-5o-SbU" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="tJ2-CF-1Cq"/>
                             <constraint firstAttribute="bottom" secondItem="gFr-i2-ugb" secondAttribute="bottom" id="vKs-DE-k9x"/>
-                            <constraint firstItem="RGI-9G-haU" firstAttribute="centerX" secondItem="F28-vI-phK" secondAttribute="centerX" id="zGx-qm-zTl"/>
                         </constraints>
                     </view>
                     <connections>
@@ -260,15 +260,15 @@
             </objects>
             <point key="canvasLocation" x="1524.6153846153845" y="113.74407582938387"/>
         </scene>
-        <!--Initial Screen View Controller-->
+        <!--Onboarding Screen View Controller-->
         <scene sceneID="aHz-VG-bsh">
             <objects>
-                <viewController id="yrJ-oD-seX" customClass="InitialScreenViewController" customModule="EscolhaDoFuturo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yrJ-oD-seX" customClass="OnboardingScreenViewController" customModule="EscolhaDoFuturo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hRA-jA-b4W">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InitialScreen" translatesAutoresizingMaskIntoConstraints="NO" id="0Rl-Vr-NUa">
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InitialScreen" translatesAutoresizingMaskIntoConstraints="NO" id="0Rl-Vr-NUa">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -278,10 +278,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressione para dar o primeiro passo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCq-j5-sY6">
                                 <rect key="frame" x="31.333333333333343" y="778" width="327.66666666666663" height="22"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="19"/>
-                                <color key="textColor" name="LabelColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="iFp-iT-HWH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0Rl-Vr-NUa" firstAttribute="height" secondItem="hRA-jA-b4W" secondAttribute="height" id="Dah-b5-knA"/>
@@ -311,9 +312,6 @@
         <image name="InitialScreen" width="332" height="664"/>
         <image name="nextButton" width="42" height="25"/>
         <image name="restartButton" width="28.5" height="32"/>
-        <namedColor name="LabelColor">
-            <color red="0.96078431372549022" green="0.5490196078431373" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="iPadViewColor">
             <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
