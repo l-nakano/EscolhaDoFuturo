@@ -91,20 +91,15 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n90-9p-DiR">
-                                <rect key="frame" x="184.66666666666666" y="222" width="20.666666666666657" height="20"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F28-vI-phK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Cqb-lf-Ngu" firstAttribute="leading" secondItem="F28-vI-phK" secondAttribute="leading" constant="220" id="5lm-jI-XAR"/>
                             <constraint firstItem="F28-vI-phK" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Cqb-lf-Ngu" secondAttribute="trailing" symbolic="YES" id="CSF-e3-1dI"/>
-                            <constraint firstItem="n90-9p-DiR" firstAttribute="top" secondItem="F28-vI-phK" secondAttribute="top" constant="178" id="Q2P-j9-oTl"/>
                             <constraint firstItem="h9I-5o-SbU" firstAttribute="width" secondItem="gFr-i2-ugb" secondAttribute="height" multiplier="145:422" id="Q6I-gV-bp1"/>
                             <constraint firstItem="h9I-5o-SbU" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="c2W-kx-ZSz"/>
                             <constraint firstAttribute="trailing" secondItem="gFr-i2-ugb" secondAttribute="trailing" id="eTX-pB-Oht"/>
-                            <constraint firstItem="n90-9p-DiR" firstAttribute="centerX" secondItem="F28-vI-phK" secondAttribute="centerX" id="gQ3-vY-DjO"/>
                             <constraint firstItem="gFr-i2-ugb" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="h8t-Nf-qdL"/>
                             <constraint firstItem="gFr-i2-ugb" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="hXu-Ai-vgl"/>
                             <constraint firstItem="F28-vI-phK" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aAo-6B-L7u" secondAttribute="trailing" symbolic="YES" id="ixQ-bf-Kzr"/>
